@@ -166,6 +166,7 @@ void receiveCallback(int packet_size) {
     // output directly over to the host
     read_len = 0;
     last_rssi = LoRa.packetRssi();
+    last_snr = LoRa.packetSnr();
     getPacketData(packet_size);
 
     // We first signal the RSSI of the
